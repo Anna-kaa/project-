@@ -1,0 +1,13 @@
+commands = ['A', 'B', 'UNDO', 'C']
+text = ''
+h = []
+
+for c in commands:
+    if c == 'UNDO':
+        if h:
+            text = h.pop()
+    else:
+        h.append(text)
+        text += c
+
+print(text)
