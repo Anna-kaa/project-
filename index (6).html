@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Трафик-Контроль: Спасение Центра</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="game-wrap">
+    <header id="hud">
+      <div class="stat">Волна: <b id="wave-value">1</b> / 5</div>
+      <div class="stat">Городской бюджет: <b id="budget-value">160</b></div>
+      <div class="stat">Пропускная способность: <b id="capacity-value">15</b></div>
+      <div class="controls">
+        <button id="start-wave-btn" type="button">Начать волну</button>
+        <button id="pause-btn" type="button">Пауза</button>
+        <button id="speed-btn" type="button">x1</button>
+        <button id="restart-btn" type="button">Начать заново</button>
+      </div>
+    </header>
+
+    <div id="stage">
+      <canvas id="game-canvas" width="900" height="620"></canvas>
+      <div id="panel" class="panel hidden"></div>
+
+      <div id="toast" class="toast"></div>
+
+      <div id="overlay" class="overlay hidden">
+        <div class="overlay-card">
+          <h2 id="overlay-title">Проверка</h2>
+          <p id="overlay-text"></p>
+          <button id="overlay-btn" type="button">Играть снова</button>
+        </div>
+      </div>
+    </div>
+
+    <p class="hint">
+      Клик по свободной площадке — постройка, по объекту — улучшение и демонтаж.
+      Клавиши 1–3 — постройка, Пробел — старт волны, Esc — закрыть меню.
+    </p>
+  </div>
+
+  <!-- ВАЖНО: сначала config.js, потом script.js -->
+  <script src="./config.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
